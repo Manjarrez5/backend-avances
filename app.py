@@ -2,6 +2,14 @@ from flask import Flask, jsonify
 
 app = Flask(__name__)
 
+@app.route('/')
+def home():
+    return '''
+    <h2>✅ Backend de Avances de Obra en Línea</h2>
+    <p>Usa la ruta <a href="/avances">/avances</a> para ver los avances de obra.</p>
+    '''
+
+
 avances = [
     {
         "fecha": "2024-05-01",
